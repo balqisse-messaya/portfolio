@@ -1,0 +1,167 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-style: italic;
+    margin-left: 1rem;
+}
+
+header nav a:hover {
+    color: #1e90ff;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.8rem 1rem;  
+    }
+
+    header .logo {
+        font-size: 1.2rem; 
+    }
+
+    header nav a {
+        font-size: 0.9rem;  
+    }
+}
+
+
+.competences {
+    padding-top: 70px; 
+    text-align: center;
+}
+
+.title-section {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.title-section h1 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.title-section .square {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title-section .square:first-of-type {
+    left: 10%;
+}
+
+.title-section .square:last-of-type {
+    right: 10%;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+    padding: 2rem;
+}
+
+.card {
+    background: rgba(30, 144, 255, 0.2);
+    border: 1px solid #1e90ff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s ease-in-out; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #1e90ff;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .title-section h1 {
+        font-size: 2rem;
+    }
+
+    .title-section .square {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;  
+    }
+
+    .title-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .title-section .square {
+        width: 30px;
+        height: 30px;
+    }
+}

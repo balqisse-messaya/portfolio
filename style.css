@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-style: italic;
+    margin-left: 1rem;
+}
+
+header nav a:hover {
+    color: #1e90ff;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    z-index: -1; 
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    padding: 5rem 1rem; 
+    z-index: 1; 
+}
+
+.banner h1 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.banner .subtitle {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.subtitle {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.animated-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    animation: colorChange 1s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #FF5733;
+    }
+    25% {
+        color: #33FF57;
+    }
+    50% {
+        color: #3357FF;
+    }
+    75% {
+        color: #F1C40F;
+    }
+    100% {
+        color: #FF33F6;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    .banner h1 {
+        font-size: 3rem; 
+    }
+
+    .banner .subtitle {
+        font-size: 2rem; 
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header nav a {
+        font-size: 0.8rem;
+    }
+
+
+    .banner h1 {
+        font-size: 2.5rem; 
+    }
+
+    .banner .subtitle {
+        font-size: 1.5rem; 
+    }
+
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
